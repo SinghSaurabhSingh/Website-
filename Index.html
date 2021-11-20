@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLDS</title>
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/design-system/2.9.4/styles/salesforce-lightning-design-system.min.css ">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <div class="slds-page-header ">
+        <div class="slds-grid slds-gutters header_part">
+            <div class=" slds-col slds-size_8-of-12 logo ">
+
+                <img src="Images/Logo.png" /><strong class="Heading">MTX</strong>
+
+                <div class="topnav" id="myTopnav">
+                    <a href="#menu" class="active">Menu</a>
+                    <a class="SUMMARY">SUMMARY</a>
+                    <a href="#Account_Summary">Account Summary</a>
+                    <a href="#INVESTMENTS">INVESTMENTS</a>
+                    <a href="#My_Investments">My Investments</a>
+                    <a href="#Investor_List">Investor List</a>
+                    <a href="#DOCUMENTS">DOCUMENTS</a>
+                    <a href="#My Document">My Document</a>
+                    <a href="#Delegate Document">Delegate Document</a>
+                    <a href="#TRANSACTIONS">TRANSACTIONS</a>
+                    <a href="#My_Investments">My Transactions</a>
+                    <a href="#DELEGATE">DELEGATE</a>
+                    <a href="#My Delegate">My Delegate</a>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="slds-col slds-align_absolute-center mobile_view">
+                <span>Dashboard</span>
+            </div> 
+            <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-p-top_large mobile_view">
+                <p>|</p>
+            </div>
+            <div class="slds-col slds-size_1-of-12 slds-align_absolute-center mobile_view">
+
+                <img src="Images/Notification Icon.svg" />
+
+            </div>
+            <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-p-top_large mobile_view">
+                <p>|</p>
+            </div>
+            <div class="slds-col slds-align_absolute-center mobile_view">
+
+                <div class="Avtar slds-p-left_xx-small">
+                    <img src="Images/user.png" />
+
+                    <a class="slds-p-left_x-small slds-p-right_small">SAURABH SINGH</a>
+
+                    <img src="Images/down arrow.png" />
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="slds-grid ">
+        <div class="slds-col slds-size_12-of-8 sidebar">
+
+            <div class="slds-grid slds-grid_vertical slds-text-align_left slds-p-left_xx-large ">
+                <div class="slds-col slds-p-top_xx-large ">
+                    <span class="Sidebar_text">SUMMARY</span>
+                    <div class="slds-col slds-p-top_medium">
+                        <span class="SidebarSub_text">Account Summary</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-p-top_xx-large alignment">
+                    <span class="Sidebar_text">INVESTMENTS</span>
+                    <div class="slds-col slds-p-top_medium">
+                        <span class="SidebarSub_text">My Investments</span>
+                    </div>
+                    <div class="slds-col slds-p-top_medium">
+                        <span class="SidebarSub_text">Investor List</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-p-top_xx-large">
+                    <span class="Sidebar_text">DOCUMENTS</span>
+                    <div class="slds-col slds-p-top_medium">
+                        <span class="SidebarSub_text">My Document</span>
+                    </div>
+                    <div class="slds-col slds-p-top_medium">
+                        <span class="SidebarSub_text">Delegate Document</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-p-top_xx-large">
+                    <span class="Sidebar_text">TRANSACTIONS</span>
+                    <div class="slds-col slds-p-top_medium">
+                        <span class="SidebarSub_text">My Transactions</span>
+                    </div>
+                </div>
+                <div class="slds-col slds-p-top_xx-large">
+                    <span class="Sidebar_text">DELEGATE</span>
+                    <div class="slds-col slds-p-top_medium">
+                        <span class="SidebarSub_text">My Delegate</span>
+                    </div>
+                </div>
+
+                <div class="copyright">
+                    &copy; 2021 MTX All Rights Reserved.
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
+        <div class="slds-grid slds-grid_vertical main_body">
+            <div class="slds-grid mobile_view heading_head">
+                <div class="slds-col heading_head_font">
+                    <span>Investor List</span>
+                </div>
+                <div class="slds-col">
+
+                    <div class="slds-form-element">
+                        <div class="slds-form-element__control">
+                            <div class="slds-combobox_container">
+                                <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click">
+                                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                                        role="none">
+                                        <input type="text" class="slds-input slds-combobox__input" id="combobox-id-12"
+                                            aria-autocomplete="list" aria-controls="listbox-id-9" aria-expanded="false"
+                                            aria-haspopup="listbox" autoComplete="off" role="combobox"
+                                            placeholder="Search by Name or Email..." />
+                                        <span
+                                            class="slds-icon_container slds-icon-utility-search slds-input__icon slds-input__icon_right">
+                                            <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
+                                                aria-hidden="true">
+
+                                                <use xlink:href="Images/symbols.svg#search"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="slds-col">
+
+                    <div class="slds-form-element">
+                        <div class="slds-form-element__control">
+                            <div class="slds-combobox_container">
+                                <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click">
+                                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                                        role="none">
+                                        <div class="slds-form-element">
+                                            <div class="slds-form-element__control slds-p-left_xx-large">
+                                                <input type="text" id="text-input-id-47" placeholder="Both" required=""
+                                                    class="slds-input" />
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right">
+                                            <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
+                                                aria-hidden="true">
+                                                <use xlink:href="Images/symbols.svg#down"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="slds-col">
+                    <div class="slds-form-element">
+                        <div class="slds-form-element__control">
+                            <div class="slds-combobox_container">
+                                <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click">
+                                    <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right"
+                                        role="none">
+                                        <div class="slds-form-element">
+                                            <div class="slds-form-element__control slds-p-left_xx-large">
+                                                <input type="text" id="text-input-id-47" placeholder="ALL" required=""
+                                                    class="slds-input" />
+                                            </div>
+                                        </div>
+                                        <span
+                                            class="slds-icon_container slds-icon-utility-down slds-input__icon slds-input__icon_right">
+                                            <svg class="slds-icon slds-icon slds-icon_x-small slds-icon-text-default"
+                                                aria-hidden="true">
+                                                <use xlink:href="Images/symbols.svg#down"></use>
+                                            </svg>
+                                        </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col">
+                    <div class="slds-p-left_xx-large">
+                        <div id="btnContainer">
+                            <a href="listview.html" class="btn"><i class="fa fa-bars"></i> </a>
+                            <a class="btn active"><i class="fa fa-th-large"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col">
+                    <div class="slds-p-left_xx-large">
+                        <img src="Images/file-download.svg" />
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="slds-col">
+
+                <div class="slds-grid mobile_alignment">
+                    <div class="slds-col slds-p-right_xx-small slds-p-left_xx-small slds-p-top_xx-small space">
+                        <div class="slds-card">
+                            <a href="#"></a><img src="Images/menu-5.png" />
+                            <div class="slds-card__header ">
+                                <img
+                                    src="https://images.unsplash.com/photo-1573002649606-a7cb9846805c?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3MjI2ODcw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400" />
+                            </div>
+                            <div class="slds-text-heading_large slds-align_absolute-center">
+                               Emma Taylor 
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_large shade">
+                                EmmaTaylor@xyz.com
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center shade">
+                                Total Contributions
+                            </div>
+
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_xx-large">
+                                &dollar; 231,243
+                            </div>
+
+
+                            <footer class="slds-card__footer">
+                                <a class="slds-card__footer-action" href="#">View Details
+                                    
+                                </a>
+                            </footer>
+
+                        </div>
+                    </div>
+                    <div class="slds-col slds-p-right_xx-small slds-p-top_xx-small space">
+                        <div class="slds-card">
+                            <a href="#"></a><img src="Images/menu-5.png" />
+                            <div class="slds-card__header ">
+                                <img
+                                    src="https://images.unsplash.com/photo-1530434673096-63ff8b5de269?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3MjYwNjk3&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400" />
+                            </div>
+                            <div class="slds-text-heading_large slds-align_absolute-center">
+                                Uesugi Suzuki
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_large shade">
+                                abcdef@xyz.com
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center shade">
+                                Total Contributions
+                            </div>
+
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_xx-large">
+                                &dollar; 821,243
+                            </div>
+
+
+                            <footer class="slds-card__footer">
+                                <a class="slds-card__footer-action" href="#">View Details
+
+                                </a>
+                            </footer>
+
+                        </div>
+                    </div>
+                    <div class="slds-col slds-p-right_xx-small slds-p-top_xx-small space">
+                        <div class="slds-card">
+                            <a href="#"></a><img src="Images/menu-5.png" />
+                            <div class="slds-card__header ">
+                                <img
+                                    src="https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3MjYwNzU1&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400" />
+                            </div>
+                            <div class="slds-text-heading_large slds-align_absolute-center">
+                                Harry Williams
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_large shade">
+                                HarryWilliams@xyz.com
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center shade">
+                                Total Contributions
+                            </div>
+
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_xx-large">
+                                &dollar; 627,343
+                            </div>
+
+
+                            <footer class="slds-card__footer">
+                                <a class="slds-card__footer-action" href="#">View Details
+                                    
+                                </a>
+                            </footer>
+
+                        </div>
+                    </div>
+                    <div class="slds-col slds-p-top_xx-small space">
+                        <div class="slds-card">
+                            <a href="#"></a><img src="Images/menu-5.png" />
+                            <div class="slds-card__header ">
+                                <img
+                                    src="https://images.unsplash.com/photo-1531750026848-8ada78f641c2?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3MjYwNzgz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400" />
+                            </div>
+                            <div class="slds-text-heading_large slds-align_absolute-center">
+                                Oliver d'souza
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_large shade">
+                                OliverD@xyz.com
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center shade">
+                                Total Contributions
+                            </div>
+
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_xx-large">
+                                &dollar; 241,343
+                            </div>
+
+
+                            <footer class="slds-card__footer">
+                                <a class="slds-card__footer-action" href="#">View Details
+                                    
+                                </a>
+                            </footer>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col">
+                <div class="slds-grid mobile_alignment">
+                    <div class="slds-col slds-p-right_xx-small slds-p-left_xx-small slds-p-top_xx-small space">
+                        <div class="slds-card">
+                            <a href="#"></a><img src="Images/menu-5.png" />
+                            <div class="slds-card__header ">
+                                <img
+                                    src="https://images.unsplash.com/photo-1609371497456-3a55a205d5eb?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3Mzk0ODUz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400" />
+                            </div>
+                            <div class="slds-text-heading_large slds-align_absolute-center">
+                                Ananya Sharma
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_large shade">
+                                AnanyaSharma@xyz.com
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center shade">
+                                Total Contributions
+                            </div>
+
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_xx-large">
+                                &dollar; 521,263
+                            </div>
+
+
+                            <footer class="slds-card__footer">
+                                <a class="slds-card__footer-action" href="#">View Details
+                                    
+                                </a>
+                            </footer>
+
+                        </div>
+                    </div>
+                    <div class="slds-col slds-p-right_xx-small slds-p-top_xx-small space">
+                        <div class="slds-card">
+                            <a href="#"></a><img src="Images/menu-5.png" />
+                            <div class="slds-card__header ">
+                                <img
+                                    src="https://images.unsplash.com/photo-1530983822321-fcac2d3c0f06?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3Mzk0OTQ4&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400" />
+                            </div>
+                            <div class="slds-text-heading_large slds-align_absolute-center">
+                                Keven hairt
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_large shade">
+                                KevenHairt@xyz.com
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center shade">
+                                Total Contributions
+                            </div>
+
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_xx-large">
+                                &dollar; 121,243
+                            </div>
+
+
+                            <footer class="slds-card__footer">
+                                <a class="slds-card__footer-action" href="#">View Details
+                                    
+                                </a>
+                            </footer>
+
+                        </div>
+                    </div>
+                    <div class="slds-col slds-p-right_xx-small slds-p-top_xx-small space">
+                        <div class="slds-card">
+                            <a href="#"></a><img src="Images/menu-5.png" />
+                            <div class="slds-card__header ">
+                                <img
+                                    src="https://images.unsplash.com/photo-1623083593166-c9fe77371021?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3Mzk1MDMz&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400" />
+                            </div>
+                            <div class="slds-text-heading_large slds-align_absolute-center">
+                                Amy Laford
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_large shade">
+                                AmyLaford@xyz.com
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center shade">
+                                Total Contributions
+                            </div>
+
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_xx-large">
+                                &dollar; 311,243
+                            </div>
+
+
+                            <footer class="slds-card__footer">
+                                <a class="slds-card__footer-action" href="#">View Details
+                                    
+                                </a>
+                            </footer>
+
+                        </div>
+                    </div>
+                    <div class="slds-col slds-p-top_xx-small space">
+                        <div class="slds-card">
+                            <a href="#"></a><img src="Images/menu-5.png" />
+                            <div class="slds-card__header ">
+                                <img
+                                    src="https://images.unsplash.com/photo-1603384699007-50799748fc45?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3Mzk1MDY4&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400" />
+                            </div>
+                            <div class="slds-text-heading_large slds-align_absolute-center">
+                                Jhon Fernandes
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_large shade">
+                                JhonFernandes@xyz.com
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center shade">
+                                Total Contributions
+                            </div>
+
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_xx-large">
+                                &dollar; 741,243
+                            </div>
+
+
+                            <footer class="slds-card__footer">
+                                <a class="slds-card__footer-action" href="#">View Details
+                                    
+                                </a>
+                            </footer>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col">
+                <div class="slds-grid mobile_alignment">
+                    <div class="slds-col slds-p-right_xx-small slds-p-left_xx-small slds-p-top_xx-small space">
+                        <div class="slds-card">
+                            <a href="#"></a><img src="Images/menu-5.png" />
+                            <div class="slds-card__header ">
+                                <img
+                                    src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3Mzk1MDk3&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400" />
+                            </div>
+                            <div class="slds-text-heading_large slds-align_absolute-center">
+                                Arvind Malhotra
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_large shade">
+                                ArvindMalhotra@xyz.com
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center shade">
+                                Total Contributions
+                            </div>
+
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_xx-large">
+                                &dollar; 431,243
+                            </div>
+
+
+                            <footer class="slds-card__footer">
+                                <a class="slds-card__footer-action" href="#">View Details
+                                    
+                                </a>
+                            </footer>
+
+                        </div>
+                    </div>
+                    <div class="slds-col slds-p-right_xx-small slds-p-top_xx-small space">
+                        <div class="slds-card">
+                            <a href="#"></a><img src="Images/menu-5.png" />
+                            <div class="slds-card__header ">
+                                <img
+                                    src="https://images.unsplash.com/photo-1580518324671-c2f0833a3af3?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3Mzk1MTE3&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400" />
+                            </div>
+                            <div class="slds-text-heading_large slds-align_absolute-center">
+                                Kaushik Kumar
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_large shade">
+                                KaushikKumar@xyz.com
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center shade">
+                                Total Contributions
+                            </div>
+
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_xx-large">
+                                &dollar; 641,243
+                            </div>
+
+
+                            <footer class="slds-card__footer">
+                                <a class="slds-card__footer-action" href="#">View Details
+                                    
+                                </a>
+                            </footer>
+
+                        </div>
+                    </div>
+                    <div class="slds-col slds-p-right_xx-small slds-p-top_xx-small space">
+                        <div class="slds-card">
+                            <a href="#"></a><img src="Images/menu-5.png" />
+                            <div class="slds-card__header ">
+                                <img
+                                    src="https://images.unsplash.com/photo-1597346908500-28cda8acfe4e?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3Mzk1MTM3&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400" />
+                            </div>
+                            <div class="slds-text-heading_large slds-align_absolute-center">
+                                Santanu Mishra
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_large shade">
+                                SantanuMishra@xyz.com
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center shade">
+                                Total Contributions
+                            </div>
+
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_xx-large">
+                                &dollar; 921,243
+                            </div>
+
+
+                            <footer class="slds-card__footer">
+                                <a class="slds-card__footer-action" href="#">View Details
+                                   
+                                </a>
+                            </footer>
+
+                        </div>
+                    </div>
+                    <div class="slds-col slds-p-top_xx-small space">
+                        <div class="slds-card">
+                            <a href="#"></a><img src="Images/menu-5.png" />
+                            <div class="slds-card__header ">
+                                <img
+                                    src="https://images.unsplash.com/photo-1520341280432-4749d4d7bcf9?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=400&ixid=MnwxfDB8MXxyYW5kb218MHx8aGVhZHNob3R8fHx8fHwxNjM3Mzk1MTY5&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=400" />
+                            </div>
+                            <div class="slds-text-heading_large slds-align_absolute-center">
+                                Rahul Kumar
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_large shade">
+                                RahulKumar@xyz.com
+                            </div>
+                            <div class="slds-text-heading_medium slds-align_absolute-center shade">
+                                Total Contributions
+                            </div>
+
+                            <div class="slds-text-heading_medium slds-align_absolute-center slds-p-bottom_xx-large">
+                                &dollar; 321,243
+                            </div>
+
+
+                            <footer class="slds-card__footer">
+                                <a class="slds-card__footer-action" href="#">View Details
+                                    
+                                </a>
+                            </footer>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+
+
+</body>
+
+</html>
